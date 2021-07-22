@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/pexels-roussety-gregory-4055678.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Dosis', sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.centered {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute
+}
+
+.icon {
+    max-width: 200px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    animation: logo-fly-in 4s ease-in-out 0s 1 both, logo-up-down 12s ease-in-out 4.5s infinite none;
+}
+
+@keyframes logo-fly-in {
+    0% {
+        opacity: 0;
+        transform: translate(-60vw, 0px);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes logo-up-down {
+    0%,
+    100% {
+        transform: translate(0, 0px);
+    }
+    25% {
+        transform: translate(0, -7px);
+    }
+    50% {
+        transform: translate(0, 7px) rotate(3deg)
+    }
+    75% {
+        transform: translate(0, 3px);
+    }
+}
+
+.main {
+    color: white;
+    text-align: center;
+}
+
+.main--heading {
+    margin-bottom: 5px;
+    font-size: 75px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.main--subtitle {
+    font-size: 25px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.button {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #057b81;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+}
+
+.button:hover {
+    background-image: radial-gradient(circle at 50% 50%, rgb(5, 123, 129) 1%, rgb(0, 73, 77) 1%);
+    background-size: 20000% 20000%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: background-size linear 0.25s;
+}
+
+.button:hover:active {
+    transition-duration: 0s;
+    background-size: 100% 100%;
+}
